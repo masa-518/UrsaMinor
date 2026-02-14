@@ -1,11 +1,13 @@
 # Main関数
 
 from tools.tools_logger import Logger
+from app import App
 
 class Main:
     
     def __init__(self):
         self.__log = Logger("Main")
+        
 
     def run(self):
         """ 実行部分 """
@@ -17,6 +19,9 @@ class Main:
     def __app(self):
         """ appクラス転送する """
         self.__log.print_info("Main App")
+        
+        app = App()
+        app.run()
     
     def __initialize(self):
         """ 最初に実施する内容 """
