@@ -13,3 +13,5 @@ class App:
         """ 実行部分 """
         
         self.__auto_voice.voice_txt("こんにちは")
+
+        
