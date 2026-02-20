@@ -10,3 +10,4 @@ class Commander:
 
         #下記に実行コマンドを表示させる
         
+        self.COMMAND_HELLOW = "hellow"
