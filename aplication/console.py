@@ -12,4 +12,6 @@ class Console:
         
     def console_run(self):
         """ console画面を出力 """
+
+        self.__tk.tkinter_label_size("hellow", 0.5, 0.5, "n", 60)
         self.__tk.root_loop()

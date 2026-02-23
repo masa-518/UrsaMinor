@@ -21,6 +21,16 @@ class TkLib:
         self.__root.geometry(self.__size)
         self.__log.print_info(f"tkinter initialise title:{self.__title}, size:{self.__size}")
     
+    def tkinter_label(self, text,relx, rely, anchor):
+        """ ラベル表示 """
+        label = tk.Label(self.__root, text=text, font=("Helvetica"))
+        label.place(relx=relx, rely=rely, anchor=anchor)
+
+    def tkinter_label_size(self, text,relx, rely, anchor, size):
+        """ ラベル表示 """
+        label = tk.Label(self.__root, text=text, font=("Helvetica", size))
+        label.place(relx=relx, rely=rely, anchor=anchor)
+
     def root_loop(self):
         self.__root.mainloop()
 
