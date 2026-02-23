@@ -13,8 +13,7 @@ class App:
         
     def run(self):
         """ 実行部分 """
-        
-        self.__auto_voice.voice_txt("こんにちは")
+
         console = Console()
         console.console_run()
 
