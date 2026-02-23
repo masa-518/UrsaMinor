@@ -3,6 +3,7 @@
 from tools.tools_logger import Logger
 from lib.tk_lib import TkLib
 from lib.autovoice import AutoVoice
+from aplication.commander import Commander
 
 class Console:
     
@@ -12,6 +13,7 @@ class Console:
         self.__tk = TkLib("console画面", "300x150")
         self.__auto_voice = AutoVoice()
         self.__console_entry = None
+        self.__comander = Commander()
         
     def console_run(self):
         """ console画面を出力 """
@@ -26,6 +28,8 @@ class Console:
 
     def button_run(self):
         self.__log.print_info("conmand run")
-        self.__log.print_debug(f'entry txt: {self.__console_entry.get()}')
+        com = self.__console_entry.get()
 
-        
+        self.__log.print_debug(f'entry txt: {com}')
+        self.__comander.select_command_for_console(com)
+
