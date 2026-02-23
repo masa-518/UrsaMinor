@@ -33,12 +33,20 @@ class TkLib:
     
     def tkinter_entry(self, width, relx, rely, anchor):
         """ Entry表示 """
-        
         entry = tk.Entry(self.__root, width=width)
         entry.place(relx=relx, rely=rely, anchor=anchor)
         return entry
     
-    def 
+    def tkinter_button(self, text, com, relx, rely, anchor):
+        """ ボタン操作 """
+        button = tk.Button(self.__root, text=text, command=com)
+        button.place(relx=relx, rely=rely, anchor=anchor)
+    
+    def tkinter_button_lumda(self, text, com, relx, rely, anchor):
+        """ ボタン操作 引数あり """
+        button = tk.Button(self.__root, text=text, command=lambda:com)
+        button.place(relx=relx, rely=rely, anchor=anchor)
+
 
     def root_loop(self):
         self.__root.mainloop()
