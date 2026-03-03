@@ -1,6 +1,7 @@
 # コマンド管理クラス
 
 from tools.tools_logger import Logger
+from lib.finance import Finance
 
 class Commander:
 
@@ -17,9 +18,25 @@ class Commander:
         if com == "hellow":
             self.__hellow()
         
+        elif com == "finance test":
+            self.__finance_direct_lib_finance()
+        
         else:
             self.__log.print_warn("Unknown Comand")
 
 
     def __hellow(self):
+        """ commander疎通確認コマンド
+        hellow を表示させる
+        """
         self.__log.print_info("Command: hellow")
+
+    def __finance_direct_lib_finance(self):
+        """ finance 単体動作確認コマンド
+        finance のlibへ直接アクセスをすることができる
+        """
+        self.__log.print_info("Command: finance test")
+
+        yet = Finance("USDJPY=X")
+        date = yet.get_rate_download_period_interval("1d", "1h")
+        print(date["Close"])
