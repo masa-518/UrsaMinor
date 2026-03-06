@@ -11,12 +11,20 @@ class Finance:
 
     def get_rate_object(self):
         """ tickerオブジェクトを取得する """
-        return yf.Ticker(self.__ticker)
+        yet =  yf.Ticker(self.__ticker)
+        self.__log.print_info("Success download rate history")
+        return yet
     
     def get_rate_period(self, period):
         """ 期間を指定オブジェクトを指定する """
-        return self.get_rate_object().history(period=period)
+        yet = self.get_rate_object().history(period=period)
+        self.__log.print_info("Success download rate history period")
+        return yet
     
     def get_rate_download_period_interval(self, period, interval):
         """ 期間と範囲を指定して為替データを取得する """
-        return yf.download(tickers= self.__ticker, period = period, interval = interval)
+        yet =  yf.download(tickers= self.__ticker, period = period, interval = interval)
+        
+        self.__log.print_info("Success download rate")
+        
+        return yet

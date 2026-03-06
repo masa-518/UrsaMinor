@@ -2,6 +2,7 @@
 
 from tools.tools_logger import Logger
 from lib.finance import Finance
+from window.window_usjp_rate import UsdFxWindow
 
 class Commander:
 
@@ -20,6 +21,9 @@ class Commander:
         
         elif com == "finance test":
             self.__finance_direct_lib_finance()
+            
+        elif com == "finance usdjpy":
+            self.__finance_usd_jpy_rate()
         
         else:
             self.__log.print_warn("Unknown Comand")
@@ -40,3 +44,9 @@ class Commander:
         yet = Finance("USDJPY=X")
         date = yet.get_rate_download_period_interval("1d", "1h")
         print(date["Close"])
+        
+    def __finance_usd_jpy_rate(self):
+        
+        self.__log.print_info("Command: finance usdjpy")
+        
+        yet = UsdFxWindow()
