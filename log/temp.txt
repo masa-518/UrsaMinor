@@ -1,1 +1,17 @@
-2026-02-14_01:55:54 [INFO]<Main> Main App
+2026-03-11_23:48:13 [INFO]<Main> Main App
+2026-03-11_23:48:13 [INFO]<TkLib> tkinter initialise title:console画面, size:300x150
+2026-03-11_23:48:13 [INFO]<Console> console windw start
+2026-03-11_23:48:13 [INFO]<AutoVoice> voice txt initialize finish
+2026-03-11_23:48:13 [INFO]<AutoVoice> voice txt -> console 画面
+2026-03-11_23:48:21 [INFO]<Console> conmand run
+2026-03-11_23:48:21 [DEBUG]<Console> entry txt: finanse usdjpy
+2026-03-11_23:48:21 [INFO]<Commander> entry command:finanse usdjpy
+2026-03-11_23:48:21 [WARN]<Commander> Unknown Comand
+2026-03-11_23:48:38 [INFO]<Console> conmand run
+2026-03-11_23:48:38 [DEBUG]<Console> entry txt: finance usdjpy
+2026-03-11_23:48:38 [INFO]<Commander> entry command:finance usdjpy
+2026-03-11_23:48:38 [INFO]<Commander> Command: finance usdjpy
+2026-03-11_23:48:38 [INFO]<TkLib> tkinter initialise title:UsdJpy画面, size:700x800
+2026-03-11_23:48:38 [INFO]<UsdFxWindow> usd-jpy windw start
+2026-03-11_23:48:50 [INFO]<UsdFxWindow> command:
+2026-03-11_23:48:50 [INFO]<UsdFxWindow> command:

@@ -1,6 +1,7 @@
 #GUI 出力
 
 import tkinter as tk
+from tkinter import ttk
 from tools.tools_logger  import Logger
 
 class TkLib:
@@ -46,6 +47,13 @@ class TkLib:
         """ ボタン操作 引数あり """
         button = tk.Button(self.__root, text=text, command=lambda:com)
         button.place(relx=relx, rely=rely, anchor=anchor)
+        
+    def tkinter_combobox(self, width, combolist, relx, rely, anchor):
+        """ combobox """
+        stringver = tk.StringVar()
+        combo = ttk.Combobox(self.__root, width = width, textvariable= stringver, values=combolist)
+        combo.place(relx=relx, rely=rely, anchor=anchor)
+        return stringver
 
 
     def root_loop(self):
